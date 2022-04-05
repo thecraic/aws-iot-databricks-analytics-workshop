@@ -1,0 +1,22 @@
+defaultLocaleCode: en-US
+localeCodes:
+  - en-US
+
+params:
+  author: AWS & Databricks 
+  baseURL: https://aws-iot-databricks-analytics.workshop.aws
+  description: By AWS and Databricks. In this workshop,
+    you will will configure AWS IoT Core to ingest stream data from the AWS Device Simulator, build an analytics
+    pipeline using Databrick Cloud workspace, and perform machine learning using Jupyter Notebooks
+  disableAssetsBusting: false
+  disableBreadcrumb: false
+  disableInlineCopyToClipBoard: false
+  disableLanguageSwitchingButton: true
+  disableNextPrev: false
+  disableSearch: false
+  disableShortcutsTitle: false
+  images:
+  - ./images/HowitWorksIoTAnalytics.png
+  themeVariant: aws
+  title: AWS IoT Databricks Analytics Workshop
+version: 2.0
