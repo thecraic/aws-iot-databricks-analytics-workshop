@@ -17,7 +17,7 @@ Credentials for the Device Simulator will be mailed to the **email address** pro
 
 #### Create the Simulated Device
 
-You are going to create a virtual device fleet to simulate household electric power consumption. You can get more information about the data simulated in this [link](https://archive.ics.uci.edu/ml/datasets/individual+household+electric+power+consumption).
+You are going to create a virtual device fleet to simulate data from wind turbines. You can get more information about the data simulated here [TODO INFO ABOUT DATA][link](https://databricks.com).
 
 1. On the left menu, navigate to **Modules** -> **Device Types** -> Click **Add Device Type**
     * **Device Type Name:** ``smart-home`` 
@@ -26,14 +26,17 @@ You are going to create a virtual device fleet to simulate household electric po
     * **Data Transmission Interval:** ``3000``  (3 seconds)
     * **Message Payload:** Click **Add Attribute** and add the following attributes:  
         
-    |     Attribute Name    |            Data Type           | Float Precision | Integer Minimum Value | Integer Maximum Value |
+    |     Attribute Name    |            Data Type           | Float Precision | Float Minimum Value | Float Maximum Value |
     |:---------------------:|:------------------------------:|:---------------:|:---------------------:|:---------------------:|
-    |     sub_metering_1    |              float             |               2 |                    10 |                   100 |
-    |     sub_metering_2    |              float             |               2 |                    10 |                   100 |
-    |     sub_metering_3    |              float             |               2 |                    10 |                    25 |
-    |  global_active_power  |              float             |               2 |                     1 |                     8 |
-    | global_reactive_power |              float             |               2 |                     5 |                    35 |
-    |        voltage        |              float             |               2 |                    10 |                   250 |
+    |     AN3               |              float             |               2 |                 -9.89 |                 10.97 |
+    |     AN4               |              float             |               2 |                -12.03 |                   100 |
+    |     AN5               |              float             |               2 |                    10 |                   100 |
+    |     AN6               |              float             |               2 |                    10 |                   100 |
+    |     AN7               |              float             |               2 |                    10 |                   100 |
+    |     AN8               |              float             |               2 |                    10 |                   100 |
+    |     AN9               |              float             |               2 |                    10 |                   100 |
+    |     AN10              |              float             |               2 |                    10 |                   100 |
+    |        SPEED          |              float             |               2 |                    10 |                   250 |
     |       timestamp       | UTC Timestamp (Choose Default) |                 |                       |                       |
 
 
