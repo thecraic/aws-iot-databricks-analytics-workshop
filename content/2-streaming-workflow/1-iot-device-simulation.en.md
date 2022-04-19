@@ -12,32 +12,43 @@ Please login to the IoT Device Simulator Management console (URL link copied fro
 
 Credentials for the Device Simulator will be mailed to the **email address** provided during CloudFormation stack creation. You will be asked to change the default password, use your **user id** (in the email) and assign a new password.
 
-![Device Simulator Login](/static/images/device-sim.png?width=600)
-
 
 #### Create the Simulated Device
 
-You are going to create a virtual device fleet to simulate data from wind turbines. You can get more information about the data simulated here [TODO INFO ABOUT DATA][link](https://databricks.com).
+You are going to create a virtual device fleet to simulate data from wind turbines. 
 
-1. On the left menu, navigate to **Modules** -> **Device Types** -> Click **Add Device Type**
-    * **Device Type Name:** ``smart-home`` 
-    * **Data Topic:** ``smarthome/house1/energy/appliances`` 
-    * **Data Transmission Duration:** ``7200000`` (120 minutes)
-    * **Data Transmission Interval:** ``3000``  (3 seconds)
+You can get more information about the data simulated here [TODO INFO ABOUT DATA][link](https://databricks.com).
+
+First we will create some "healthy" devices.
+
+1. On the menu, choose -> **Device Types** -> Click **Add Device Type**
+    * **Device Type Name:** ``healthy-turbine`` 
+    * **Data Topic:** ``wind-farm/site-1/turbines`` 
     * **Message Payload:** Click **Add Attribute** and add the following attributes:  
         
-    |     Attribute Name    |            Data Type           | Float Precision | Float Minimum Value | Float Maximum Value |
+    |     Attribute Name    |            Data Type           | Float Precision |  Minimum Value |  Maximum Value |
     |:---------------------:|:------------------------------:|:---------------:|:---------------------:|:---------------------:|
-    |     AN3               |              float             |               2 |                 -9.89 |                 10.97 |
-    |     AN4               |              float             |               2 |                -12.03 |                   100 |
-    |     AN5               |              float             |               2 |                    10 |                   100 |
-    |     AN6               |              float             |               2 |                    10 |                   100 |
-    |     AN7               |              float             |               2 |                    10 |                   100 |
-    |     AN8               |              float             |               2 |                    10 |                   100 |
-    |     AN9               |              float             |               2 |                    10 |                   100 |
-    |     AN10              |              float             |               2 |                    10 |                   100 |
-    |        SPEED          |              float             |               2 |                    10 |                   250 |
-    |       timestamp       | UTC Timestamp (Choose Default) |                 |                       |                       |
+    |     ID                |              Integer           |                 |                     1 |                   500 |
+    |     AN3               |              Float             |               2 |                     0 |                     9 |
+    |     AN4               |              Float             |               2 |                     0 |                    11 |
+    |     AN5               |              Float             |               2 |                     0 |                    15 |
+    |     AN6               |              Float             |               2 |                     0 |                    16 |
+    |     AN7               |              Float             |               2 |                     0 |                    17 |
+    |     AN8               |              Float             |               2 |                     0 |                    30 |
+    |     AN9               |              Float             |               2 |                     0 |                    32 |
+    |     AN10              |              Float             |               2 |                     0 |                    15 |
+    |     SPEED             |              Float             |               2 |                     1 |                     5 |
+    |     timestamp         | UTC Timestamp (Choose Default) |                 |                       |                       |
+
+
+Add some additional string values to the payload to help readabliity:
+
+    |     Attribute Name    |            Data Type           |  Static Value         |  
+    |:---------------------:|:------------------------------:|:---------------------:|
+    |     TORQUE            |              String           |     ''                 |
+    |     STATUS            |              String           |     HEALTHY            |
+
+
 
 
 3. Once the sample message payload shows all the attributes above, click **Save**
